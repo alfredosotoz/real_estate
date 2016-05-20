@@ -1,0 +1,65 @@
+<%= form_for(@casa) do |f| %>
+  <% if @casa.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@casa.errors.count, "error") %> prohibited this casa from being saved:</h2>
+
+      <ul>
+      <% @casa.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+    <div class="row">
+      <div class="col-xs-12 .col-sm-6 .col-md-8">
+          <div class="field">
+            <%= f.label :colonia %><br>
+            <%= f.text_field :colonia, class: "form-control" %>
+          </div>
+          <div class="form-group">
+            <%= f.label :calle %><br>
+            <%= f.text_field :calle, class: "form-control" %>
+          </div>
+          <div class="form-group">
+            <%= f.label :numero_casa %><br>
+            <%= f.number_field :numero_casa, class: "form-control" %>
+          </div>
+          <div class="form-group">
+            <%= f.label :superficie_terreno %><br>
+            <%= f.text_field :superficie_terreno, class: "form-control" %>
+          </div>
+          <div class="form-group">
+            <%= f.label :superficie_construccion %><br>
+            <%= f.text_field :superficie_construccion, class: "form-control" %>
+          </div>
+          <div class="form-group">
+            <%= f.label :banos %><br>
+            <%= f.text_field :banos, class: "form-control" %>
+          </div>
+          <div class="form-group">
+            <%= f.label :recamaras %><br>
+            <%= f.number_field :recamaras, class: "form-control" %>
+          </div>
+          <div class="form-group">
+            <%= f.label :cochera %><br>
+            <%= f.check_box :cochera %>
+          </div>
+          <div class="form-group">
+            <%= f.label :jardin %><br>
+            <%= f.check_box :jardin %>
+          </div>
+          <div class="form-group">
+            <%= f.label :precio %><br>
+            <%= f.text_field :precio, class: "form-control" %>
+          </div>
+          <div class="form-group">
+            <%= f.label :descripcion %><br>
+            <%= f.text_area :descripcion, class: "form-control" %>
+          </div>
+          <div class="form-group">
+            <%= f.submit class: "btn btn-primary" %>
+          </div>
+      </div>
+    </div>
+<% end %>
