@@ -69,6 +69,7 @@ class CasasController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def casa_params
-      params.require(:casa).permit(:colonia, :calle, :numero_casa, :superficie_terreno, :superficie_construccion, :banos, :recamaras, :cochera, :jardin, :precio, :descripcion)
+      params.require(:casa).permit(:colonia, :calle, :numero_casa, :superficie_terreno, :superficie_construccion, :banos, :recamaras,
+      :cochera, :jardin, :precio, :descripcion, {images: []})
     end
 end

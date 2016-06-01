@@ -55,5 +55,14 @@
   <%= @casa.descripcion %>
 </p>
 
+<p>
+    <% @casa.images.each do |image| %>
+    <%= image_tag(image.url(:thumb)) %> 
+    <% end %>
+</p>
+
+
+
+
 <%= link_to 'Edit', edit_casa_path(@casa) %> |
 <%= link_to 'Back', casas_path %>
