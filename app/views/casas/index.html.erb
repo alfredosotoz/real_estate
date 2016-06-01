@@ -9,11 +9,10 @@
 		<!-- Subseccion de Catalogo -->
     			<div class="col-lg-4 col-sm-12 col-md-4">
 				<div class="thumbnail timg">
-					  <img src="http://tinyhouseswoon.com/wp-content/uploads/2013/10/savannah-container-house-1.jpg" alt="image">
-				
-					<div class="tcont">
-						<h4>Precio: <%= casa.precio %></h4>
-						<p>Colonia: <%= casa.colonia %></p><br>
+						<%= image_tag(casa.images[0]) %>
+				<div class="tcont">
+					<h4>Precio: <%= casa.precio %></h4>
+					<p>Colonia: <%= casa.colonia %></p><br>
 						<%= link_to 'Ver casa', casa %>
 					</div>
 				</div>
